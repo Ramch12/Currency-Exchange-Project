@@ -1,0 +1,111 @@
+API No:-1
+API Name:register API
+Endpoint:/create
+method:post
+body:
+{
+     "first_name":"anuj",
+     "last_name":"titwal",
+     "phone":"7273734897",
+     "email":"pavan@adigos1.com",
+     "password":"password"
+}
+
+
+
+API No:-2
+API Name:Login API
+Endpoint:/login
+method:post
+body:
+{
+     "email":"pavan@adigos1.com",
+     "password":"password"
+}
+
+
+
+API No:-3
+API Name:-Get coins
+Endpoint:-/market
+method:-Get
+
+
+
+API No:-4
+API Name:-Get cryptocurrency
+Endpoint:-/currency_symbols
+method:-Get
+
+
+
+API No:-5
+API Name:-Get Coinhistory
+Endpoint:-/coin_history
+method:-Get
+
+
+
+API No:-6
+API Name:-Get OpenOrder
+Endpoint:-/openorder
+method:-Get
+
+
+
+API No:-7
+API Name:-openbuyorder
+Endpoint:-/openbuyorder
+method:-Get
+
+
+
+API No:-8
+API Name:-Open sell OpenOrder
+Endpoint:-/opensellorder
+method:-Get
+
+
+
+API No:-9
+API Name:-Completed order
+Endpoint:-/completed_orders
+method Get
+
+
+
+API No:-10
+API Name:-Completed order history
+API Endpoint:-/user_completed_order_history
+method:-Get
+
+
+
+API No:-11
+API Name:-All user completed order
+API Endpoint:-/all_user_completed_orders
+method :-Get
+
+
+
+API No:-12
+API Name:-Insert data into DBT biding table
+API Endpoint:-/insertdata
+method:-post
+body{
+    bid_type:-Buy/Sell
+    bid_price:-
+    bid_qty:-
+    bid_qty_available:-
+    total_amount:-
+    amount_available:-
+    coin_id:-
+    currency_symbols:-
+    market_id:-
+    market_symbol:-
+    user_id:-
+    open_order:-
+    fee amount:-
+    status:-1/2
+}
+
