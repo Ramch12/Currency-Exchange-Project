@@ -50,6 +50,10 @@ API No:-6
 API Name:-Get OpenOrder
 Endpoint:-/openorder
 method:-Get
+query parameter
+{
+     market_symbol:-
+}
 
 
 
@@ -57,6 +61,10 @@ API No:-7
 API Name:-openbuyorder
 Endpoint:-/openbuyorder
 method:-Get
+query parameter
+{
+  market_symbol:-
+}
 
 
 
@@ -64,6 +72,10 @@ API No:-8
 API Name:-Open sell OpenOrder
 Endpoint:-/opensellorder
 method:-Get
+query parameter
+{
+    market_symbol:-
+}
 
 
 
@@ -71,6 +83,10 @@ API No:-9
 API Name:-Completed order
 Endpoint:-/completed_orders
 method Get
+query parameter
+{
+     market_symbol:-
+}
 
 
 
@@ -78,6 +94,11 @@ API No:-10
 API Name:-Completed order history
 API Endpoint:-/user_completed_order_history
 method:-Get
+query parameter
+{
+     market_symbol:=
+     user_id:-
+}
 
 
 
@@ -85,7 +106,10 @@ API No:-11
 API Name:-All user completed order
 API Endpoint:-/all_user_completed_orders
 method :-Get
-
+query parameter
+{
+     user_id:-
+}
 
 
 API No:-12

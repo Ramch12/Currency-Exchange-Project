@@ -27,7 +27,7 @@ router
 
 router
     .route('/markets')
-    .get(auth,getcoin);
+    .get(getcoin);
 
 
 router
