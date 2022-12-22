@@ -11,6 +11,9 @@ module.exports = async function createUser(req, res, next) {
 
         const { error } = validate(req.body);
         if (error) return res.status(400).json({status:0,"error": error.details[0].message });
+        
+        const id= await conn.query("select * from dbt_user where user_id=?",[req.body.referal_id]);
+        if(!id[0].length) return res.status(400).json({status:0,message:"Not autherized for registration"});
 
         const user = await conn.query('select email from dbt_user where email=?', [req.body.email]);
         if (user[0].length) return res.status(400).json({ message: "User is already registered",status:0 });
