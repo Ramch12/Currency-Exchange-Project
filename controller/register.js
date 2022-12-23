@@ -12,8 +12,8 @@ module.exports = async function createUser(req, res, next) {
         const { error } = validate(req.body);
         if (error) return res.status(400).json({status:0,"error": error.details[0].message });
         
-        const id= await conn.query("select * from dbt_user where user_id=?",[req.body.referal_id]);
-        if(!id[0].length) return res.status(400).json({status:0,message:"Not autherized for registration"});
+        const id= await conn.query("select * from dbt_user where user_id=?",[req.body.referral_id]);
+        if(!id[0].length) return res.status(400).json({status:0,message:"Not authorized for registration"});
 
         const user = await conn.query('select email from dbt_user where email=?', [req.body.email]);
         if (user[0].length) return res.status(400).json({ message: "User is already registered",status:0 });
@@ -33,7 +33,7 @@ module.exports = async function createUser(req, res, next) {
             userdata[2],
             2
         ));
-        const data = await conn.query('insert into dbt_user(first_name,last_name,email,password,phone,user_id,referral_id) values(?)', [userdata]);
+        const data = await conn.query('insert into dbt_user(first_name,last_name,email,password,phone,referral_id,user_id) values(?)', [userdata]);
         if (data.length) {
             const token=jwt.sign({user_id:userdata[5]},process.env.Private_key);
             res.header('x-auth-token',token).json({status:1,"message":"succesfully registered",token:token});
