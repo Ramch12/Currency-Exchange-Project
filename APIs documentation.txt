@@ -8,7 +8,8 @@ body:
      "last_name":"titwal",
      "phone":"7273734897",
      "email":"pavan@adigos1.com",
-     "password":"password"
+     "password":"password",
+     "referral_id":"Puneet31"
 }
 
 
@@ -23,30 +24,45 @@ body:
      "password":"password"
 }
 
-
-
 API No:-3
+API Name:Forgot password
+Endpoint:"/forgotPass"
+method:POST
+Body:
+{
+email:"abcd@gmail.com"
+}
+
+API No:-4
+API Name:-Reset password
+Endpoint:-"/resetPass/:resettoken"
+body{
+     password:'********'
+}
+
+
+API No:-5
 API Name:-Get coins
 Endpoint:-/market
 method:-Get
 
 
 
-API No:-4
+API No:-6
 API Name:-Get cryptocurrency
 Endpoint:-/currency_symbols
 method:-Get
 
 
 
-API No:-5
+API No:-7
 API Name:-Get Coinhistory
 Endpoint:-/coin_history
 method:-Get
 
 
 
-API No:-6
+API No:-8
 API Name:-Get OpenOrder
 Endpoint:-/openorder
 method:-Get
@@ -57,7 +73,7 @@ query parameter
 
 
 
-API No:-7
+API No:-9
 API Name:-openbuyorder
 Endpoint:-/openbuyorder
 method:-Get
@@ -68,7 +84,7 @@ query parameter
 
 
 
-API No:-8
+API No:-10
 API Name:-Open sell OpenOrder
 Endpoint:-/opensellorder
 method:-Get
@@ -79,7 +95,7 @@ query parameter
 
 
 
-API No:-9
+API No:-11
 API Name:-Completed order
 Endpoint:-/completed_orders
 method Get
@@ -90,7 +106,7 @@ query parameter
 
 
 
-API No:-10
+API No:-12
 API Name:-Completed order history
 API Endpoint:-/user_completed_order_history
 method:-Get
@@ -102,7 +118,7 @@ query parameter
 
 
 
-API No:-11
+API No:-13
 API Name:-All user completed order
 API Endpoint:-/all_user_completed_orders
 method :-Get
@@ -112,7 +128,7 @@ query parameter
 }
 
 
-API No:-12
+API No:-14
 API Name:-Insert data into DBT biding table
 API Endpoint:-/insertdata
 method:-post

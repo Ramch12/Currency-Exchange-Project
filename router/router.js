@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const auth=require('../middleware/auth');
+const auth = require('../middleware/auth');
 const createUser = require('../controller/register');
 const { loginUser } = require('../controller/Login');
 const { getcoin } = require('../controller/userdata');
@@ -13,6 +13,8 @@ const { openorderst1 } = require('../controller/userdata');
 const { openorderst2 } = require('../controller/userdata');
 const { openorderst3 } = require('../controller/userdata');
 const { openorderst4 } = require('../controller/userdata');
+const { forgotPass } = require('../controller/forgotPass');
+const { resetPass } = require('../controller/resetPass');
 
 
 router
@@ -25,9 +27,21 @@ router
     .post(loginUser);
 
 
+
+router
+    .route('/forgotPass')
+    .post(forgotPass);
+
+
+router
+    .route('/resetPass/:resettoken')
+    .put(resetPass);
+
+
+
 router
     .route('/markets')
-    .get(auth,getcoin);
+    .get(getcoin);
 
 
 router
