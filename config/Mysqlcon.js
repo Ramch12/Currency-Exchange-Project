@@ -3,7 +3,7 @@ async function connect() {
     const connect = createConnection({
         host: 'localhost',
         user: "root",
-        password: "",
+        password: "RECK839@12",
         database: "trade"
     });
     return connect;

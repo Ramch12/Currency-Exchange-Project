@@ -1,7 +1,7 @@
 module.exports = (handler) => {
-    return async (req, res, next) => {
+    return async (decoded,req, res, next) => {
         try {
-            await handler(req, res);
+            await handler(decoded,req, res);
         }
         catch (err) {
             next(err);
